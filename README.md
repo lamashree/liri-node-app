@@ -17,5 +17,9 @@ In this assignment. we are making LIRI like iphone's SIRI. liri is a language in
 4.  Song preview spotify URL
  ## API-request
  This command line using the API request to spotify.
-![API Request](images/Screen Shot 2019-11-01 at 12.35.20 AM.jpeg)
-<img src="images/Screen Shot 2019-11-01 at 12.35.20 AM.jpeg" alt="API request"/>
+<img src="images/Screen Shot 2019-11-01 at 12.39.39 AM.png" 
+alt="API request"/>
+
+## Output of API request.
+<img src="images/Screen Shot 2019-11-01 at 12.35.20 AM.jpeg" 
+alt="response"/>
