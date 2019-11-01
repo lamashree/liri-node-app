@@ -2,34 +2,37 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var fs = require("fs");
 var Spotify = require('node-spotify-api');
-fs.readFile("random.txt", "utf8", function (error, data) {
-
-    // If the code experiences any errors it will log the error to the console.
-    if (error) {
-        return console.log(error);
-    }
-
-    // We will then print the contents of data
-    console.log(data);
-
-    // Then split it by commas (to make it more readable)
-    var dataArr = data.split(",");
-
-    // We will then re-display the content as an array for later use.
-    console.log(dataArr);
-
-});
+// });
 // spotify-this-song// 
-var artist=" "
-var songName = " "
-var axios = require("axios");
+// var artist=" "
+// var songName = " "
+// var axios = require("axios");
 
 var spotify = new Spotify(keys.spotify);
+// console.log(keys.spotify)
 
-var queryURL = "https://api.spotify.com/v1/search?q=track:" + songName + "%20artist:" + artist + "&type=track&limit=10";
-spotify.request(queryURL).then(function (data) {
-    console.log(data);
-})
+spotify.search({ type: 'track', query: 'All the Small Things' }, function (err, data) {
+
+    if (err) {
+        return console.log('Error occurred: ' + err);
+    }
+
+    console.log("Name: " + data.tracks.items[0].album.artists[0].name);
+    console.log("URL for song: " + data.tracks.items[0].album.artists[0].uri);
+    console.log("type: " + data.tracks.items[0].album.artists[0].type);
+
+    console.log("album: " + data.tracks.items[0].album.name);
+    console.log("Total tracks: " + data.tracks.items[0].album.total_tracks);
 
 
-//
+});
+
+
+
+//movie-this//
+
+// var movieName=""
+// axios.get("http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&apikey=trilogy").then(
+//   function(response) {
+
+//   });
