@@ -39,3 +39,14 @@ In thie "Movie-this", Axios is using to retrive the movie data using OMDB API. H
 <img src="images/Image 11-2-19 at 8.14 PM.jpg" 
 alt="Movie Response data"/>
 
+## concert-this
+Expected output:
+* Name of the venue
+* Venue location
+* Date of the Event (use moment to format this as "MM/DD/YYYY")<br>
+This is searching for band in Town API by artist name. The image i attached with this showed how i sent API request to the Band in town and their results is store in array.
+
+<img src="images/Image 11-2-19 at 10.05 PM.jpg" 
+alt="concert API call and Response data"/>
+
+
