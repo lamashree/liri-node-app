@@ -3,51 +3,54 @@ var keys = require("./keys.js");
 var fs = require("fs");
 var axios = require("axios");
 var Spotify = require('node-spotify-api');
-// });
-// spotify-this-song// 
-// var artist=" "
-// var songName = " "
-// var axios = require("axios");
+var moment = require('moment');
+moment().format();
+
 var input = process.argv[2];
 var input1 = process.argv.slice(3).join(" ");
 
 //concert-this//
 
 function spotify() {
+    var input = process.argv[2];
+    var songs = process.argv.slice(3).join(" ");
+
     var spotify = new Spotify(keys.spotify);
 
-    spotify.search({ type: 'track', query: 'All the Small Things' }, function (err, data) {
+    spotify.search({ type: 'track', query: songs }, function (err, data) {
 
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-
-        console.log("Name: " + data.tracks.items[0].album.artists[0].name);
-        console.log("URL for song: " + data.tracks.items[0].album.artists[0].uri);
-        console.log("type: " + data.tracks.items[0].album.artists[0].type);
-
-        console.log("album: " + data.tracks.items[0].album.name);
-        console.log("Total tracks: " + data.tracks.items[0].album.total_tracks);
-
-
+        var dataResult = [
+            "Name:  " + data.tracks.items[0].album.artists[0].name,
+            "URL for song:  " + data.tracks.items[0].album.artists[0].uri,
+            "type:  " + data.tracks.items[0].album.artists[0].type,
+            "album:  " + data.tracks.items[0].album.name,
+            "Total tracks:  " + data.tracks.items[0].album.total_tracks
+        ]
+        console.log(dataResult);
     });
 
 }
 
 function movieInfo() {
-    var movieName = " ";
-    var queryUrl = "http://www.omdbapi.com/?t=" + "the godfather" + "&y=&plot=short&apikey=trilogy";
+    var input = process.argv[2];
+    var movieName = process.argv.slice(3).join(" ");
+
+    var movieName = " the godfather";
+    var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
     axios.get(queryUrl).then(function (movieResponse) {
         // console.log(movieResponse.data);
         var resData = [
-            "Movie Title: " + movieResponse.data.Title,
-            "Released Year: " + movieResponse.data.Released,
-            "Rating: " + movieResponse.data.imdbRating,
-            "Rotten Tomatoes Rating: " + movieResponse.data.Ratings[1].Value,
-            "Produced country: " + movieResponse.data.Country,
-            "Language: " + movieResponse.data.Language,
-            "Plot: " + movieResponse.data.Plot,
-            "Actors: " + movieResponse.data.Actors,
+            "Movie Title:  " + movieResponse.data.Title,
+            "Released Year:  " + movieResponse.data.Released,
+            "Rating:  " + movieResponse.data.imdbRating,
+            "Rotten Tomatoes Rating:  " + movieResponse.data.Ratings[1].Value,
+            "Produced country:  " + movieResponse.data.Country,
+            "Language:  " + movieResponse.data.Language,
+            "Plot:  " + movieResponse.data.Plot,
+            "Actors:  " + movieResponse.data.Actors,
         ]
         console.log(resData);
 
@@ -55,26 +58,29 @@ function movieInfo() {
 
 }
 
-function bandInTown(){
-   var bandName = " "
-// queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-var queryURL = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
+function bandInTown() {
+    var input = process.argv[2];
+    var artist = process.argv.slice(3).join(" ");
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
-console.log(queryURL);
-axios.get(queryURL).then(function (response) {
-    console.log(response);
-});
- 
+    console.log(queryURL);
+    axios.get(queryURL).then(function (response) {
+        // console.log(response.data[0]);
+        showData = [
+            "Venue Name:  " + response.data[0].venue.name,
+            "Venue location:  " + response.data[0].venue.city,
+            "Event data: " + response.data[0].datetime
+        ]
+        console.log(showData);
+
+    })
 }
-
-
-
 
 switch (input) {
     case "concert-this":
         bandInTown();
         break;
-    case "spotify-this-song": -
+    case "spotify-this-song":
         spotify();
         break;
     case "movie-this":
