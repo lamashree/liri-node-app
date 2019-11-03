@@ -23,3 +23,9 @@ alt="API request"/>
 ## Output of API request.
 <img src="images/Screen Shot 2019-11-01 at 12.35.20 AM.jpeg" 
 alt="response"/>
+
+## Movie-this
+In thie "Movie-this", Axios is using to retrive the movie data using OMDB API. Here is images of API request and their result.
+<img src="images/Image 11-2-19 at 8.14 PM.jpg" 
+alt="Movie Response data"/>
+
