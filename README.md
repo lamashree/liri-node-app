@@ -33,7 +33,7 @@ Expected output:
 * Country where the movie was produced.
 * Language of the movie.
 * Plot of the movie.
-* Actors in the movie.
+* Actors in the movie.<br/>
 In thie "Movie-this", Axios is using to retrive the movie data using OMDB API. Here is images of API request and their result.
 
 <img src="images/Image 11-2-19 at 8.14 PM.jpg" 
