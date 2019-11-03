@@ -42,7 +42,7 @@ Expected output:
 * Date of the Event (use moment to format this as "MM/DD/YYYY")<br>
 This is searching for band in Town API by artist name. The image i attached with this showed how i sent API request to the Band in town and their results is store in array.
 
-<img src="images/Image 11-2-19 at 10.05 PM.jpg" 
+<img src="images/Image 11-2-19 at 10.53 PM.jpg" 
 alt="concert API call and Response data"/>
 
 
