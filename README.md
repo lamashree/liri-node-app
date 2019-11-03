@@ -25,7 +25,17 @@ alt="API request"/>
 alt="response"/>
 
 ## Movie-this
+Expected output:
+* Title of the movie.
+   * Year the movie came out.
+   * IMDB Rating of the movie.
+   * Rotten Tomatoes Rating of the movie.
+   * Country where the movie was produced.
+   * Language of the movie.
+   * Plot of the movie.
+   * Actors in the movie.
 In thie "Movie-this", Axios is using to retrive the movie data using OMDB API. Here is images of API request and their result.
+
 <img src="images/Image 11-2-19 at 8.14 PM.jpg" 
 alt="Movie Response data"/>
 
