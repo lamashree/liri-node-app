@@ -9,7 +9,6 @@ moment().format();
 var input = process.argv[2];
 var input1 = process.argv.slice(3).join(" ");
 
-//concert-this//
 
 function spotify() {
     var input = process.argv[2];
@@ -30,6 +29,12 @@ function spotify() {
             "Total tracks:  " + data.tracks.items[0].album.total_tracks
         ]
         console.log(dataResult);
+
+        fs.appendFile("log.txt", dataResult, function (err) {
+            if (err) throw err;
+            console.log(dataResult);
+        });
+
     });
 
 }
@@ -53,6 +58,11 @@ function movieInfo() {
         ]
         console.log(resData);
 
+        fs.appendFile("log.txt", resData, function (err) {
+            if (err) throw err;
+            console.log(resData);
+        });
+
     })
 
 }
@@ -71,12 +81,25 @@ function bandInTown() {
             "Event data: " + response.data[0].datetime
         ]
         console.log(showData);
+        fs.appendFile("log.txt", showData, function(err) {
+            if (err) throw err;
+            console.log(showData );
+          });
 
     })
 }
-// funntion doWhatInfo(){
+function doWhatInfo() {
 
-// }
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        var output = data.split(",");
+        for (var i = 0; i < output.length; i++) {
+            console.log(output[i]);
+        }
+    });
+};
 
 switch (input) {
     case "concert-this":
