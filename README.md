@@ -17,12 +17,8 @@ In this assignment. we are making LIRI like iphone's SIRI. liri is a language in
 4.  Song preview spotify URL
  ## API-request
  This command line using the API request to spotify.
-<img src="images/Screen Shot 2019-11-01 at 12.39.39 AM.png" 
-alt="API request"/>
-
-## Output of API request.
-<img src="images/Screen Shot 2019-11-01 at 12.35.20 AM.jpeg" 
-alt="response"/>
+<img src="images/Image 11-2-19 at 10.43 PM.jpg" 
+alt="spotify API request and response"/>
 
 ## Movie-this
 Expected output:
@@ -36,7 +32,7 @@ Expected output:
 * Actors in the movie.<br/>
 In thie "Movie-this", Axios is using to retrive the movie data using OMDB API. Here is images of API request and their result.
 
-<img src="images/Image 11-2-19 at 8.14 PM.jpg" 
+<img src="images/Image 11-2-19 at 10.47 PM.jpg" 
 alt="Movie Response data"/>
 
 ## concert-this

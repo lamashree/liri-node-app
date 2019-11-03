@@ -38,7 +38,6 @@ function movieInfo() {
     var input = process.argv[2];
     var movieName = process.argv.slice(3).join(" ");
 
-    var movieName = " the godfather";
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
     axios.get(queryUrl).then(function (movieResponse) {
         // console.log(movieResponse.data);
@@ -75,6 +74,9 @@ function bandInTown() {
 
     })
 }
+// funntion doWhatInfo(){
+
+// }
 
 switch (input) {
     case "concert-this":
