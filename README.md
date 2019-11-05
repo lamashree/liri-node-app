@@ -1,6 +1,6 @@
 # liri-node-app
 ## Overview
-In this assignment. we are making LIRI like iphone's SIRI. liri is a language interpretation and Recognation interface. liri is command line node app that takes in parameters and gives you back data. This **liri** node app will take different command line to generate result. user has to pass the following command line app to work. user can use ** node liri.js concert-this "artists name", node liri.js spotify-this-song "song name", node liri.js movie-this "movie name" and do-what=it-says to get information for search.
+In this assignment. we are making LIRI like iphone's SIRI. liri is a language interpretation and Recognation interface. liri is command line node app that takes in parameters and gives you back data. This **liri** node app will take different command line to generate result. user has to pass the following command line app to work. user can use **node liri.js** concert-this "artists name", node liri.js spotify-this-song "song name", node liri.js movie-this "movie name" and do-what=it-says to get information for search.
 
 
 ## App Command Lines
