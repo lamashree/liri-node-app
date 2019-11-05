@@ -1,6 +1,10 @@
+//this is referencing the .env file //
 require("dotenv").config();
+//this i referencing keys.js//
 var keys = require("./keys.js");
+//this is required to read or write file//
 var fs = require("fs");
+// this is requiring axios and gobally defining axios//
 var axios = require("axios");
 var Spotify = require('node-spotify-api');
 var moment = require('moment');
@@ -8,8 +12,7 @@ moment().format();
 
 var input = process.argv[2];
 var input1 = process.argv.slice(3).join(" ");
-
-
+  
 function spotify() {
     var input = process.argv[2];
     var songs = process.argv.slice(3).join(" ");
@@ -89,7 +92,8 @@ function bandInTown() {
     })
 }
 function doWhatInfo() {
-
+    var input = process.argv[2];
+console.log("this is working");-it
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
             return console.log(error);
@@ -116,3 +120,15 @@ switch (input) {
         break;
 
 }
+
+fs.writeFile("log.txt", "this is funtion",function(err){
+    if (err){
+        return console.log(err)
+    }
+    console.log("log.txt is updated");
+})
+
+// function moment(){
+//     var  date= $("event data");
+//     moment().format("MM/dd/yy");
+// };
