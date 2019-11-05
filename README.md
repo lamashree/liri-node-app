@@ -47,3 +47,7 @@ This is searching for band in Town API by artist name. The image i attached with
 alt="concert API call and Response data"/>
 
 
+## do-what-it-says
+If user didn't provide correct input for specific search the liri will read the log.txt file and will give you some short of result. The function is following.
+<img src="images/Image 11-4-19 at 3.52 PM.jpg" 
+alt="function for do what it says"/>
