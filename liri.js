@@ -8,11 +8,10 @@ var fs = require("fs");
 var axios = require("axios");
 var Spotify = require('node-spotify-api');
 var moment = require('moment');
-moment().format();
 
 var input = process.argv[2];
 var input1 = process.argv.slice(3).join(" ");
-  
+
 function spotify() {
     var input = process.argv[2];
     var songs = process.argv.slice(3).join(" ");
@@ -78,10 +77,16 @@ function bandInTown() {
     console.log(queryURL);
     axios.get(queryURL).then(function (response) {
         // console.log(response.data[0]);
+        // var date= response.data[0].datetime
+        // console.log(date.format("MM/DD/YYYY"))
+        var date = response.data[0].datetime;
+        date = moment(date).format("MM/DD/YYYY");
         showData = [
             "Venue Name:  " + response.data[0].venue.name,
             "Venue location:  " + response.data[0].venue.city,
-            "Event data: " + response.data[0].datetime
+            "Event data: " + response.data[0].datetime,
+            "Date of Event: " + date
+            
         ]
         console.log(showData);
         fs.appendFile("log.txt", showData, function(err) {
@@ -128,7 +133,3 @@ fs.writeFile("log.txt", "this is funtion",function(err){
     console.log("log.txt is updated");
 })
 
-// function moment(){
-//     var  date= $("event data");
-//     moment().format("MM/dd/yy");
-// };
