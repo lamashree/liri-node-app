@@ -53,6 +53,6 @@ If user didn't provide correct input for specific search the liri will read the 
 alt="function for do what it says"/>
 
 ## function for log.txt 
-In this function whatever user search for it will take the information and it will append those to log.txt.
+In this function whatever user search for OMDB movies, spotify song, concert for artist and other(do-what-it-say) it will take the information and it will append those to log.txt.
 <img src="images/Image 11-14-19 at 6.05 PM.jpg" 
 alt="function for that will write in log.txt"/>
