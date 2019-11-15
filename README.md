@@ -51,3 +51,8 @@ alt="concert API call and Response data"/>
 If user didn't provide correct input for specific search the liri will read the log.txt file and will give you some short of result. The function is following.
 <img src="images/Image 11-4-19 at 3.52 PM.jpg" 
 alt="function for do what it says"/>
+
+## function for log.txt 
+In this function whatever user search for it will take the information and it will append those to log.txt.
+<img src="images/Image 11-14-19 at 6.05 PM.jpg" 
+alt="function for that will write in log.txt"/>
